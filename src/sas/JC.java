@@ -1,6 +1,6 @@
 package sas;
 
-import java.util.Arrays;
+import java.util	.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -8,16 +8,26 @@ public class JC {
 
 	public static void main(String[] args) {
 		
-		List<Integer> numbers= Arrays.asList(1,2,3,4,5);
-		List<Integer> even=numbers.stream()
-				.filter(n -> n%2==0)
-				.collect(Collectors.toList());
-		System.out.println(even);
-				
+		int[] arr = {5, 2, 9, 1, 6};
+
+		for (int i = 0; i < arr.length; i++) {
+		    for (int j = i + 1; j < arr.length; j++) {
+		        if (arr[i] < arr[j]) {
+		            int temp = arr[i];
+		            arr[i] = arr[j];
+		            arr[j] = temp;
+		        }
+		    }
+		}
+
+		for (int i : arr) {
+		    System.out.print(i + " ");
+		}
+
+			
 			
 				
+				
+			}
 		
-		
-	}
-
-}
+		}
